@@ -1,0 +1,66 @@
+//This class demonstrates the Student class
+import java.io.*;
+import java.util.Scanner;
+import java.io.File;
+
+public class StudentDemo {
+   public static void main(String[] args) throws Exception{
+        //Create a scanner object to read from the user.
+        Scanner scanner=new Scanner(System.in);
+        //Create a file where students write 
+        File file=new File("StudentAutomation.txt");
+        //The Java.io.PrintWriter class prints formatted representations of objects to a text-output stream.
+        PrintWriter printWriter=new PrintWriter("StudentAutomation.txt");
+        //Prompt the user for input and store.        
+        System.out.println("How many students will enter?");
+        //Declare variables.
+        int number=scanner.nextInt();
+        scanner.nextLine();
+        int x=0;
+        while(x<number){
+            System.out.println("Name:");
+            String name=scanner.nextLine();
+            
+            System.out.println("Surname:");
+            String surname=scanner.nextLine();
+            
+            System.out.println("ID:");
+            String id=scanner.nextLine();
+            
+            System.out.println("GPA:");
+            double gpa=scanner.nextDouble();
+              scanner.nextLine();
+            
+           Student student=new Student(name,surname,id,gpa);
+            
+            printWriter.println(name+" "+surname+" "+id+" "+gpa);
+          
+            x++;     
+        }
+        printWriter.close();
+        while(true){
+            //This operations which operations to do.
+        String operations="1-Show all students\n"+
+                "2-Search a student with id number\n"+
+                "3-Press k for exit";
+        //Here we use "////" symbol for to prevent confusion from.
+        System.out.println("//////////////////////////////////");
+        System.out.println(operations);
+        System.out.println("//////////////////////////////////");
+        
+        String operation=scanner.nextLine();
+        
+        if(operation.equals("1")){
+           
+     Scanner sc = new Scanner(file);
+  
+      while (sc.hasNextLine()) {
+      System.out.println(sc.nextLine()); 
+      }     
+      
+      
+      
+}       
+}
+}
+}

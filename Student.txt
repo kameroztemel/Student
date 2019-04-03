@@ -1,0 +1,56 @@
+public class Student {
+    
+    private String Name; // the name of student
+    private String Surname; // the surname of student
+    private String ID;  // the number of student 
+    private double GPA; //average grade of the student
+    
+    //Constructor creates a student with given name,surname,id and gpa.
+    public Student(String Name,String Surname,String ID,double GPA){
+        this.Name=Name;
+        this.Surname=Surname;
+        this.ID=ID;
+        this.GPA=GPA;    
+    }
+    //Mutator method stores the desired name. 
+    public void setName(String name){
+        this.Name=name;    
+    }
+    //Mutator method stores the desired surname. 
+    public void setSurname(String surname) {
+        this.Surname = surname;
+    }
+    //Mutator method stores the desired id. 
+    public void setID(String ID) {
+        this.ID = ID;
+    }  
+    //Mutator method stores the desired gpa.
+    public void setGPA(double GPA) {
+        this.GPA =GPA;
+    }
+    /*Accessor method returns the current name
+      @return the current name
+    */
+    public String getName(){
+        
+        return Name;
+    }
+    /*Accessor method returns the current Surname
+      @return the current Surname
+    */
+    public String getSurname() {
+        return Surname;
+    }
+    /*Accessor method returns the current ID
+      @return the current ID
+    */
+    public String getID() {
+        return ID;
+    }
+    /*Accessor method returns the current GPA
+      @return the current GPA
+    */
+    public double getGPA() {
+        return GPA;
+    }
+}
